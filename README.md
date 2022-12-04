@@ -23,6 +23,7 @@ _ "m7s.live/plugin/exporter/v4"
 
 ```yaml
 exporter:
+  printcollectors: true # 是否打印开启的采集器，默认 true
   nodeaddr: zh_cn #节点位置
   enabled: "[defaults]" #默认开启的采集器，如果是 defaults，在 yaml 里要用双引号，可以设置开启的采集器，名称见上
   collector: #每个采集器的配置，仅 cpu net 两个采集器有配置

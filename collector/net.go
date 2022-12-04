@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"github.com/shirou/gopsutil/v3/net"
 	"m7s.live/engine/v4/config"
-	"m7s.live/engine/v4/log"
 	"regexp"
 	"time"
 
@@ -93,7 +92,6 @@ func (c *NetworkCollector) Collect(ch chan<- prometheus.Metric) {
 		} else {
 			c.lastNetWork[nic.Name] = &netInfo{IOCountersStat: nic}
 		}
-		log.Infof("aaaa now: %d  last %d", now.Unix(), c.lastTime.Unix())
 		c.lastTime = now
 
 		ch <- prometheus.MustNewConstMetric(

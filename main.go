@@ -122,11 +122,6 @@ var exporter = ExporterConfig{
 	collectors:      make(map[string]collector.Collector),
 }
 
-type netCfg struct {
-	Black string
-	White string
-}
-
 func (p *ExporterConfig) OnEvent(event any) {
 	switch event.(type) {
 	case FirstConfig:
