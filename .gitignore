@@ -1,0 +1,15 @@
+*.exe
+.vscode
+.idea
+resource
+*.log
+/monibuca
+node_modules
+shutdown.bat
+shutdown.sh
+.m7s
+debug.go
+dist/
+record/
+config2.yaml
+config1.yaml
