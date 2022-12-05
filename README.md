@@ -42,8 +42,9 @@ exporter:
 ```yaml
 scrape_configs:
   - job_name: "monibuca_exporter"
+    metrics_path: "/exporter/api/metrics"
     static_configs:
-      - targets: ["ip:port/exporter/api/metrics"]
+      - targets: ["ip:port"] # monibuca 的ip和端口
 ```
 
 # 二次开发
